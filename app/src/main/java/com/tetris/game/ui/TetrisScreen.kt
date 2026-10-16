@@ -47,7 +47,6 @@ import com.tetris.game.engine.BagPieceSource
 import com.tetris.game.engine.Cell
 import com.tetris.game.engine.GameSnapshot
 import com.tetris.game.engine.PieceType
-import com.tetris.game.engine.Shapes
 import com.tetris.game.engine.TetrisGame
 import kotlin.random.Random
 import kotlinx.coroutines.coroutineScope
@@ -189,6 +188,7 @@ private fun BoardArea(snapshot: GameSnapshot, modifier: Modifier = Modifier) {
             Spacer(Modifier.width(gap))
             NextPanel(
                 type = snapshot.next,
+                cells = snapshot.nextCells,
                 modifier = Modifier.width(nextWidth),
             )
         }
@@ -288,7 +288,7 @@ private fun GameOverOverlay(modifier: Modifier = Modifier) {
 }
 
 @Composable
-private fun NextPanel(type: PieceType, modifier: Modifier = Modifier) {
+private fun NextPanel(type: PieceType, cells: List<Cell>, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .clip(RoundedCornerShape(8.dp))
@@ -298,7 +298,6 @@ private fun NextPanel(type: PieceType, modifier: Modifier = Modifier) {
     ) {
         Text("NEXT", color = Muted, fontSize = 11.sp, letterSpacing = 1.5.sp)
         Spacer(Modifier.height(8.dp))
-        val cells = Shapes.cellsOf(type, rotation = 0, originX = 0, originY = 0)
         Canvas(Modifier.size(72.dp)) {
             val cell = size.minDimension / 4f
             val minX = cells.minOf { it.x }

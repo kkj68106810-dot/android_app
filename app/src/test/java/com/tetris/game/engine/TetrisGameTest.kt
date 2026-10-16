@@ -36,8 +36,9 @@ class TetrisGameTest {
         assertFalse(game.moveLeft())
 
         game.placeActiveForTest(PieceType.O, 0, 3, 5)
-        // O at x=3 occupies columns 4 and 5. One step left occupies column 3.
-        game.loadLockedForTest(listOf(3 to 5))
+        // O lives in columns 1–2 and rows 1–2 of its 4x4 box, so x=3,y=5
+        // occupies (4,6), (5,6), (4,7), (5,7). One step left needs (3,6).
+        game.loadLockedForTest(listOf(3 to 6))
         assertFalse(game.fits(PieceType.O, 0, 2, 5))
         assertFalse(game.moveLeft())
         assertEquals(3, game.snapshot().activeX)
@@ -46,10 +47,10 @@ class TetrisGameTest {
     @Test
     fun pieceCannotOccupyFloorOrAnotherBlock() {
         val game = gameOf(PieceType.O)
-        assertTrue(game.fits(PieceType.O, 0, 3, 18))
-        assertFalse(game.fits(PieceType.O, 0, 3, 19))
+        assertTrue(game.fits(PieceType.O, 0, 3, 17))
+        assertFalse(game.fits(PieceType.O, 0, 3, 18))
         assertFalse(game.fits(PieceType.O, 0, 8, 0))
-        game.loadLockedForTest(listOf(5 to 10))
+        game.loadLockedForTest(listOf(5 to 11))
         assertFalse(game.fits(PieceType.O, 0, 4, 10))
         assertTrue(game.fits(PieceType.O, 0, 0, 10))
     }
@@ -149,7 +150,7 @@ class TetrisGameTest {
         val dropped = gameOf(PieceType.O, PieceType.T)
         dropped.hardDrop()
         val snap = dropped.snapshot()
-        assertEquals(36, snap.score)
+        assertEquals(34, snap.score)
         assertEquals(PieceType.O, snap.locked[18][4])
         assertEquals(PieceType.O, snap.locked[19][5])
         assertEquals(PieceType.T, snap.activeType)
@@ -161,7 +162,7 @@ class TetrisGameTest {
         val game = gameOf(PieceType.T, PieceType.T)
         val spawn = game.snapshot().activeCells
         game.loadLockedForTest(spawn.map { it.x to it.y })
-        game.placeActiveForTest(PieceType.O, 0, 3, 18)
+        game.placeActiveForTest(PieceType.O, 0, 3, 17)
         game.hardDrop()
         assertTrue(game.snapshot().isGameOver)
         assertFalse(game.moveLeft())

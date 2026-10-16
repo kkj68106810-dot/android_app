@@ -28,7 +28,7 @@ jobs:
 
       - name: Install SDK packages
         run: |
-          sdkmanager --install "platforms;android-36" "build-tools;36.0.0" "platform-tools"
+          sdkmanager --install "platforms;android-37.2" "build-tools;36.0.0" "platform-tools"
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4

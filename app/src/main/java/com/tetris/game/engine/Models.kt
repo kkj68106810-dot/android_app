@@ -35,6 +35,7 @@ data class GameSnapshot(
     val activeCells: List<Cell>,
     val ghostCells: List<Cell>,
     val next: PieceType,
+    val nextCells: List<Cell>,
     val score: Int,
     val lines: Int,
     val level: Int,

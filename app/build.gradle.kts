@@ -5,7 +5,11 @@ plugins {
 
 android {
     namespace = "com.tetris.game"
-    compileSdk = 36
+    compileSdk {
+        version = release(37) {
+            minorApiLevel = 2
+        }
+    }
 
     defaultConfig {
         applicationId = "com.tetris.game"

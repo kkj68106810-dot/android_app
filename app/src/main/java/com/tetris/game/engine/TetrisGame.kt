@@ -43,6 +43,7 @@ class TetrisGame(
             activeCells = activeCells,
             ghostCells = if (piece == null || isGameOver) emptyList() else ghostCells(piece),
             next = nextType,
+            nextCells = Shapes.cellsOf(nextType, rotation = 0, originX = 0, originY = 0),
             score = score,
             lines = lines,
             level = level,

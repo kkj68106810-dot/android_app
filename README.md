@@ -11,7 +11,7 @@ Scoring follows the usual scale, multiplied by the current level: 100 / 300 / 50
 ## Requirements
 
 - JDK 17 or newer
-- Android SDK platform 36 and build-tools 36.0.0
+- Android SDK platform 37.2 and build-tools 36.0.0
 
 Point `ANDROID_HOME` at the SDK (or put `sdk.dir` in a gitignored `local.properties`).
 
