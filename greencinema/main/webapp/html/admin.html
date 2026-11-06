@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b09">
+<title>하우스 데스크 | 그린시네마</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+	<div class="admin-shell">
+		<aside class="admin-side">
+			<a class="admin-logo" href="admin.html">GREEN<span>CINEMA</span><small>HOUSE DESK</small></a>
+			<p class="admin-side__kicker">CONTROL</p>
+			<nav class="admin-nav" aria-label="관리자 메뉴">
+				<a class="is-active" href="#overview">대시보드</a>
+				<a href="#movies">상영작 <span class="admin-nav__count">10</span></a>
+				<a href="#notices">공지사항 <span class="admin-nav__count">6</span></a>
+				<a href="#inquiries">1:1 문의 <span class="admin-nav__count">3</span></a>
+				<a href="#faq">FAQ <span class="admin-nav__count">8</span></a>
+			</nav>
+			<div class="admin-side__foot">
+				<a href="../preview/home.html">회원 화면 미리보기</a>
+				<a href="../preview/home.html">로그아웃</a>
+			</div>
+		</aside>
+		<div class="admin-main">
+			<header class="admin-top" id="overview">
+				<div>
+					<p class="tiny-eyebrow">ADMINISTRATOR</p>
+					<h1>하우스 데스크</h1>
+					<p>상영작, 공지, 문의, FAQ를 한 자리에서 봅니다. 실제 JSP는 MySQL greencinema에서 이 숫자를 채웁니다.</p>
+				</div>
+				<div class="admin-who"><span class="admin-who__dot"></span>admin · 관리자</div>
+			</header>
+			<div class="admin-marquee" aria-hidden="true">
+				<p>NOW SHOWING · GREEN CINEMA · HOUSE LIGHTS DOWN · TICKETS · NOTICES · INQUIRIES</p>
+			</div>
+			<section class="admin-stats" aria-label="운영 현황">
+				<article class="admin-stat"><div class="admin-stat__label">상영작</div><div class="admin-stat__value admin-stat__value--green">10</div><p class="admin-stat__hint">movie 테이블</p></article>
+				<article class="admin-stat"><div class="admin-stat__label">공지</div><div class="admin-stat__value">6</div><p class="admin-stat__hint">notice 테이블</p></article>
+				<article class="admin-stat"><div class="admin-stat__label">답변 대기</div><div class="admin-stat__value admin-stat__value--green">3</div><p class="admin-stat__hint">문의 18건 중</p></article>
+				<article class="admin-stat"><div class="admin-stat__label">FAQ</div><div class="admin-stat__value">8</div><p class="admin-stat__hint">faq 테이블</p></article>
+			</section>
+			<section class="admin-section" id="movies">
+				<div class="admin-section__head"><div><h2>상영작</h2><p>회원 홈의 포스터와 같은 영화 목록입니다.</p></div></div>
+				<div class="admin-panel">
+					<div class="admin-movies">
+						<article class="admin-movie"><img src="../img/m01.jpg" alt=""><h3 class="admin-movie__title">다시, 봄</h3><div class="admin-movie__meta"><span class="age-badge age-badge--12">12</span><span>112분</span></div></article>
+						<article class="admin-movie"><img src="../img/m02.jpg" alt=""><h3 class="admin-movie__title">어나더 월드</h3><div class="admin-movie__meta"><span class="age-badge age-badge--15">15</span><span>128분</span></div></article>
+						<article class="admin-movie"><img src="../img/m03.jpg" alt=""><h3 class="admin-movie__title">야간 비행</h3><div class="admin-movie__meta"><span class="age-badge age-badge--all">ALL</span><span>98분</span></div></article>
+						<article class="admin-movie"><img src="../img/m04.jpg" alt=""><h3 class="admin-movie__title">그린라이트</h3><div class="admin-movie__meta"><span class="age-badge age-badge--12">12</span><span>121분</span></div></article>
+						<article class="admin-movie"><img src="../img/m05.jpg" alt=""><h3 class="admin-movie__title">마지막 회차</h3><div class="admin-movie__meta"><span class="age-badge age-badge--19">19</span><span>134분</span></div></article>
+					</div>
+				</div>
+			</section>
+			<section class="admin-section" id="inquiries">
+				<div class="admin-section__head"><div><h2>1:1 문의</h2><p>답변 대기는 이 칸에서 등록합니다.</p></div></div>
+				<div class="admin-panel">
+					<div class="admin-table-wrap">
+						<table class="admin-table">
+							<thead><tr><th>번호</th><th>회원 / 분류</th><th>내용</th><th>답변</th></tr></thead>
+							<tbody>
+								<tr>
+									<td class="is-muted">52</td>
+									<td>user01<div class="admin-answer">영화관 · 불만</div></td>
+									<td><strong>상영관 청결 문제</strong><div class="admin-answer">상영관 내부에 쓰레기가 많이 있었습니다.</div></td>
+									<td>
+										<form class="admin-reply">
+											<textarea placeholder="회원에게 보낼 답변">불편을 드려 죄송합니다. 해당 회차 상영관을 점검했습니다.</textarea>
+											<button class="btn btn--primary btn--small" type="button">답변 등록</button>
+										</form>
+									</td>
+								</tr>
+								<tr>
+									<td class="is-muted">14</td>
+									<td>user02<div class="admin-answer">예매/결제 · 문의</div></td>
+									<td><strong>예매 취소 방법 문의</strong><div class="admin-answer">예매한 영화를 취소하려면 어떻게 해야 하나요?</div></td>
+									<td><span class="status-badge status-badge--success">답변 완료</span><p class="admin-answer">마이페이지의 예매 내역에서 취소할 수 있습니다.</p></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
