@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/* 그린시네마 1:1 문의 목록 — 기존 JSP 수정 없이 적용 */
+section:has(> .paging) {
+    max-width: 1100px;
+    margin: 48px auto;
+    padding: 36px;
+    background: #fff;
+    border: 1px solid #e7edf0;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(30, 64, 70, .06);
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+section:has(> .paging) > table {
+    width: 100%;
+    min-width: 650px;
+    border: 0;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 14px;
+    color: #1c3326;
+}
+
+section:has(> .paging) > table th,
+section:has(> .paging) > table td {
+    border: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+section:has(> .paging) > table th {
+    padding: 18px 14px;
+    background: #e7fbee;
+    color: #067a3e;
+    font-weight: 700;
+    border-bottom: 2px solid #b7f0cf;
+}
+
+section:has(> .paging) > table td {
+    padding: 18px 14px;
+    border-bottom: 1px solid #ecf0f2;
+}
+
+section:has(> .paging) > table th:nth-child(4) { width: 38%; }
+section:has(> .paging) > table td:nth-child(4) {
+    text-align: left;
+    font-weight: 600;
+    color: #122018;
+}
+
+section:has(> .paging) > table td:first-child { color: #94a3b8; }
+section:has(> .paging) > table tr:not(:first-child):hover { background: #f7fbfa; }
+
+section:has(> .paging) > table td a[href="#"] {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: #e7fbee;
+    color: #067a3e;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+section:has(> .paging) > table td p {
+    display: inline-block;
+    margin: 0;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: #f2f4f6;
+    color: #768394;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+section:has(> .paging) > .paging {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+section:has(> .paging) > .paging a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background-color .2s, color .2s, border-color .2s;
+    cursor: pointer;
+}
+
+section:has(> .paging) > .paging a:hover {
+    background: #03a85a;
+    border-color: #03a85a;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    section:has(> .paging) {
+        margin: 20px 12px;
+        padding: 18px 12px;
+        border-radius: 12px;
+    }
+    section:has(> .paging) > table th,
+    section:has(> .paging) > table td {
+        padding: 14px 10px;
+        font-size: 12px;
+    }
+    section:has(> .paging) > .paging { gap: 5px; }
+}

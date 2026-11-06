@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="그린시네마 포트폴리오 웹사이트 HTML/CSS 시안">
+<meta name="theme-color" content="#11151a">
+<title>영화관 메인 | 그린시네마</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+	<header class="site-header">
+		<div class="container site-header__inner">
+			<a class="logo" href="index.html" aria-label="그린시네마 홈">GREEN<span>CINEMA</span><small
+				class="logo__sub">CINEMA FOR EVERYONE</small></a>
+			<nav class="main-nav" aria-label="주 메뉴">
+				<a href="index.html#movies" aria-current="page">영화</a><a
+					href="booking.html">예매</a><a href="booking.html#theater">극장</a><a
+					href="notices.html">고객센터</a>
+			</nav>
+			<div class="header-actions">
+				<a class="header-actions__link" href="login.html">로그인</a><span
+					class="header-actions__sep" aria-hidden="true">/</span><a
+					class="header-actions__link" href="register.html">회원가입</a><a
+					class="header-pill" href="mypage.html">마이페이지</a>
+			</div>
+		</div>
+	</header>
+	<main id="main">
+		<section class="hero hero--feature">
+			<div class="container hero__inner feature-hero">
+				<div class="hero__content">
+					<p class="hero__eyebrow">
+						THE MOVIE STARTS HERE <span class="hero-eyebrow-line"></span>
+						GREEN CINEMA
+					</p>
+					<h1 class="hero__title">
+						오늘의 장면이<br>
+						<span class="green-gradient-text">오래 남을 이야기</span>가 되도록.
+					</h1>
+					<p class="hero__description">
+						상상 속 영화 10편과 함께하는 새로운 영화관 경험.<br>그린시네마에서 원하는 영화를 만나보세요.
+					</p>
+					<div class="hero__ctas">
+						<a class="btn btn--primary btn--large" href="#movies">상영 영화 보기
+							<span aria-hidden="true">↗</span>
+						</a><a class="btn btn--hero-outline btn--large" href="booking.html">빠른
+							예매</a>
+					</div>
+					<div class="hero__micro">
+						SCREENING NOW <span>·</span> 10 MOVIES <span>·</span> 3 REGIONS
+					</div>
+				</div>
+				<div class="hero-poster-stack" aria-hidden="true">
+					<img class="hero-poster-stack__back"
+						src="assets/posters/greencinema_poster_02.png" alt=""><img
+						class="hero-poster-stack__mid"
+						src="assets/posters/greencinema_poster_04.png" alt=""><img
+						class="hero-poster-stack__front"
+						src="assets/posters/greencinema_poster_01.png" alt=""><span
+						class="hero-poster-stack__label">FEATURED <b>01</b></span>
+				</div>
+			</div>
+		</section>
+		<section class="content-section" id="movies">
+			<div class="container">
+				<div class="section-header">
+					<div>
+						<p class="tiny-eyebrow">NOW SHOWING</p>
+						<h2 class="section-title">
+							현재 상영작 <em>10</em>
+						</h2>
+						<p class="section-subtitle">그린시네마의 가상 영화 컬렉션</p>
+					</div>
+					<a class="section-link" href="booking.html">전체 예매 보기 ↗</a>
+				</div>
+				<div class="movie-filters" aria-label="장르 안내">
+					<span class="movie-filter is-active">전체 영화</span><span
+						class="movie-filter">로맨스</span><span class="movie-filter">SF
+						· 판타지</span><span class="movie-filter">드라마 · 스릴러</span><span
+						class="movie-filter">애니메이션</span>
+				</div>
+				<div class="movie-grid">
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-01.html" aria-label="다시, 봄 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_01.png"
+								alt="가상 영화 다시, 봄 포스터" loading="lazy"></a><span
+								class="movie-card__rank">01</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-01.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-01.html">다시, 봄</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--12">12</span><span>로맨스</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>112분</span>
+						</div>
+					</article>
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-02.html" aria-label="어나더 월드 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_02.png"
+								alt="가상 영화 어나더 월드 포스터" loading="lazy"></a><span
+								class="movie-card__rank">02</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-02.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-02.html">어나더 월드</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--12">12</span><span>SF</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>124분</span>
+						</div>
+					</article>
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-03.html" aria-label="바람의 기사 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_03.png"
+								alt="가상 영화 바람의 기사 포스터" loading="lazy"></a><span
+								class="movie-card__rank">03</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-03.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-03.html">바람의 기사</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--all">전체</span><span>판타지</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>118분</span>
+						</div>
+					</article>
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-04.html" aria-label="그림자 속의 진실 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_04.png"
+								alt="가상 영화 그림자 속의 진실 포스터" loading="lazy"></a><span
+								class="movie-card__rank">04</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-04.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-04.html">그림자 속의 진실</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--15">15</span><span>스릴러</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>106분</span>
+						</div>
+					</article>
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-05.html" aria-label="행복한 동행 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_05.png"
+								alt="가상 영화 행복한 동행 포스터" loading="lazy"></a><span
+								class="movie-card__rank">05</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-05.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-05.html">행복한 동행</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--all">전체</span><span>가족</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>95분</span>
+						</div>
+					</article>
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-06.html" aria-label="달빛 고양이 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_06.png"
+								alt="가상 영화 달빛 고양이 포스터" loading="lazy"></a><span
+								class="movie-card__rank">06</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-06.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-06.html">달빛 고양이</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--all">전체</span><span>애니메이션</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>101분</span>
+						</div>
+					</article>
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-07.html" aria-label="너의 계절 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_07.png"
+								alt="가상 영화 너의 계절 포스터" loading="lazy"></a><span
+								class="movie-card__rank">07</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-07.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-07.html">너의 계절</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--12">12</span><span>드라마</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>109분</span>
+						</div>
+					</article>
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-08.html" aria-label="열 번째 증인 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_08.png"
+								alt="가상 영화 열 번째 증인 포스터" loading="lazy"></a><span
+								class="movie-card__rank">08</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-08.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-08.html">열 번째 증인</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--15">15</span><span>미스터리</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>127분</span>
+						</div>
+					</article>
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-09.html" aria-label="더 라스트 데이 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_09.png"
+								alt="가상 영화 더 라스트 데이 포스터" loading="lazy"></a><span
+								class="movie-card__rank">09</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-09.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-09.html">더 라스트 데이</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--15">15</span><span>재난</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>132분</span>
+						</div>
+					</article>
+					<article class="movie-card">
+						<div class="movie-card__poster-wrap">
+							<a href="movie-10.html" aria-label="별이 되는 노래 상세정보"><img
+								class="movie-card__poster"
+								src="assets/posters/greencinema_poster_10.png"
+								alt="가상 영화 별이 되는 노래 포스터" loading="lazy"></a><span
+								class="movie-card__rank">10</span>
+							<div class="movie-card__actions">
+								<a class="btn btn--primary btn--small" href="booking.html">예매하기</a><a
+									class="btn btn--dark btn--small" href="movie-10.html">상세보기</a>
+							</div>
+						</div>
+						<h3 class="movie-card__title">
+							<a href="movie-10.html">별이 되는 노래</a>
+						</h3>
+						<div class="movie-card__meta">
+							<span class="age-badge age-badge--12">12</span><span>음악</span><span
+								class="meta-separator" aria-hidden="true">·</span><span>114분</span>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section class="promo-band">
+			<div class="container promo-band__inner">
+				<div>
+					<p class="tiny-eyebrow">GREEN CINEMA GUIDE</p>
+					<h2>
+						취향에 맞는 영화를 찾고,<br>자리까지 간편하게 선택하세요.
+					</h2>
+					<p>영화 선택 → 극장·일정 선택 → 좌석 선택 → 결제 순서의 예매 화면을 둘러보세요.</p>
+				</div>
+				<a class="btn btn--primary btn--large" href="booking.html">예매 화면
+					보기 ↗</a>
+			</div>
+		</section>
+		<section class="content-section content-section--white">
+			<div class="container">
+				<div class="section-header">
+					<div>
+						<p class="tiny-eyebrow">SERVICE</p>
+						<h2 class="section-title">그린시네마 이용 안내</h2>
+					</div>
+				</div>
+				<div class="service-grid">
+					<a class="service-card" href="booking.html"><span
+						class="service-card__num">01</span><span
+						class="service-card__icon">▦</span>
+					<h3>영화 예매</h3>
+						<p>영화·극장·상영일정을 고르는 화면</p>
+						<strong>화면 보기 ↗</strong></a><a class="service-card" href="mypage.html"><span
+						class="service-card__num">02</span><span
+						class="service-card__icon">▤</span>
+					<h3>마이페이지</h3>
+						<p>예매내역과 문의내역을 확인하는 화면</p>
+						<strong>화면 보기 ↗</strong></a><a class="service-card" href="faq.html"><span
+						class="service-card__num">03</span><span
+						class="service-card__icon">?</span>
+					<h3>고객센터</h3>
+						<p>FAQ·공지사항·1:1 문의 안내</p>
+						<strong>화면 보기 ↗</strong></a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="site-footer">
+		<div class="container site-footer__inner">
+			<div>
+				<div class="site-footer__brand">
+					GREEN<span style="color: #03c75a">CINEMA</span>
+				</div>
+				<p class="footer-copy">
+					그린시네마 · 조별과제 포트폴리오 UI 시안<br>영화, 극장, 상영시간, 요금 및 예매 정보는 모두 예시
+					데이터입니다.
+				</p>
+			</div>
+			<div class="site-footer__links">
+				<a href="index.html#movies">영화</a><a href="booking.html">예매</a><a
+					href="notices.html">공지사항</a><a href="faq.html">FAQ</a><a
+					href="inquiry.html">1:1문의</a><a href="admin.html">관리자 시안</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

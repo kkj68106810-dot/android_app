@@ -1,0 +1,418 @@
+<main id="main">
+		<div class="page-content">
+			<div class="container">
+				<div class="page-heading">
+					<p class="page-heading__eyebrow">TICKET BOOKING</p>
+					<h1 class="page-heading__title">인원 · 좌석 선택</h1>
+					<p class="page-heading__description">100석 좌석 배치도에서 좌석을 선택해보세요.</p>
+				</div>
+				<div class="demo-note">
+					<span class="demo-note__dot" aria-hidden="true"></span>좌석 체크 표시는
+					작동하지만 HTML/CSS만으로 인원 제한·선택 좌석 합산·중복 예매 방지는 구현되지 않습니다.
+				</div>
+				<ol class="booking-steps" aria-label="예매 진행 단계">
+					<li class="booking-step is-complete"><span class="step-num">01</span>
+						영화·극장 선택</li>
+					<li class="booking-step is-current"><span class="step-num">02</span>
+						인원·좌석 선택</li>
+					<li class="booking-step "><span class="step-num">03</span> 결제</li>
+					<li class="booking-step "><span class="step-num">04</span> 예매
+						완료</li>
+				</ol>
+				<div class="booking-layout">
+					<div class="booking-main">
+						<section class="booking-panel">
+							<h2 class="booking-panel__title">
+								<span class="number-kicker">01</span> 관람 인원
+							</h2>
+							<div class="ticket-types">
+								<div class="ticket-counter">
+									<div>
+										<div class="ticket-counter__label">성인</div>
+										<div class="ticket-counter__hint">일반 관람객 · 예시 14,000원</div>
+									</div>
+									<select class="form-control count-select" aria-label="성인 인원"><option>0명</option>
+										<option selected>1명</option>
+										<option>2명</option>
+										<option>3명</option>
+										<option>4명</option>
+										<option>5명</option>
+										<option>6명</option>
+										<option>7명</option>
+										<option>8명</option></select>
+								</div>
+								<div class="ticket-counter">
+									<div>
+										<div class="ticket-counter__label">청소년</div>
+										<div class="ticket-counter__hint">청소년 관람객 · 예시 11,000원</div>
+									</div>
+									<select class="form-control count-select" aria-label="청소년 인원"><option
+											selected>0명</option>
+										<option>1명</option>
+										<option>2명</option>
+										<option>3명</option>
+										<option>4명</option>
+										<option>5명</option>
+										<option>6명</option>
+										<option>7명</option>
+										<option>8명</option></select>
+								</div>
+							</div>
+							<p class="booking-warning">※ PPT 요구사항: 성인 + 청소년 최대 8명 (실제 검증은
+								Java/JSP에서 구현)</p>
+						</section>
+						<section class="booking-panel">
+							<h2 class="booking-panel__title">
+								<span class="number-kicker">02</span> 좌석 선택
+							</h2>
+							<div class="seat-layout">
+								<div class="screen-indicator">SCREEN</div>
+								<div class="seat-grid" role="group"
+									aria-label="1관 좌석 선택 A열부터 J열까지">
+									<span class="seat-choice"><input type="checkbox"
+										id="seat-A1" name="seat" value="A1" disabled><label
+										class="seat" for="seat-A1" title="A1 좌석">A1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-A2"
+										name="seat" value="A2" disabled><label class="seat"
+										for="seat-A2" title="A2 좌석">A2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-A3"
+										name="seat" value="A3"><label class="seat"
+										for="seat-A3" title="A3 좌석">A3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-A4"
+										name="seat" value="A4"><label class="seat"
+										for="seat-A4" title="A4 좌석">A4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-A5"
+										name="seat" value="A5"><label class="seat"
+										for="seat-A5" title="A5 좌석">A5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-A6"
+										name="seat" value="A6"><label class="seat"
+										for="seat-A6" title="A6 좌석">A6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-A7"
+										name="seat" value="A7"><label class="seat"
+										for="seat-A7" title="A7 좌석">A7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-A8"
+										name="seat" value="A8"><label class="seat"
+										for="seat-A8" title="A8 좌석">A8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-A9"
+										name="seat" value="A9"><label class="seat"
+										for="seat-A9" title="A9 좌석">A9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-A10" name="seat" value="A10"><label
+										class="seat" for="seat-A10" title="A10 좌석">A10</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-B1"
+										name="seat" value="B1"><label class="seat"
+										for="seat-B1" title="B1 좌석">B1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-B2"
+										name="seat" value="B2"><label class="seat"
+										for="seat-B2" title="B2 좌석">B2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-B3"
+										name="seat" value="B3" disabled><label class="seat"
+										for="seat-B3" title="B3 좌석">B3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-B4"
+										name="seat" value="B4" disabled><label class="seat"
+										for="seat-B4" title="B4 좌석">B4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-B5"
+										name="seat" value="B5"><label class="seat"
+										for="seat-B5" title="B5 좌석">B5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-B6"
+										name="seat" value="B6"><label class="seat"
+										for="seat-B6" title="B6 좌석">B6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-B7"
+										name="seat" value="B7"><label class="seat"
+										for="seat-B7" title="B7 좌석">B7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-B8"
+										name="seat" value="B8"><label class="seat"
+										for="seat-B8" title="B8 좌석">B8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-B9"
+										name="seat" value="B9"><label class="seat"
+										for="seat-B9" title="B9 좌석">B9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-B10" name="seat" value="B10"><label
+										class="seat" for="seat-B10" title="B10 좌석">B10</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-C1"
+										name="seat" value="C1"><label class="seat"
+										for="seat-C1" title="C1 좌석">C1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-C2"
+										name="seat" value="C2"><label class="seat"
+										for="seat-C2" title="C2 좌석">C2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-C3"
+										name="seat" value="C3"><label class="seat"
+										for="seat-C3" title="C3 좌석">C3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-C4"
+										name="seat" value="C4"><label class="seat"
+										for="seat-C4" title="C4 좌석">C4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-C5"
+										name="seat" value="C5"><label class="seat"
+										for="seat-C5" title="C5 좌석">C5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-C6"
+										name="seat" value="C6"><label class="seat"
+										for="seat-C6" title="C6 좌석">C6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-C7"
+										name="seat" value="C7"><label class="seat"
+										for="seat-C7" title="C7 좌석">C7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-C8"
+										name="seat" value="C8" disabled><label class="seat"
+										for="seat-C8" title="C8 좌석">C8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-C9"
+										name="seat" value="C9"><label class="seat"
+										for="seat-C9" title="C9 좌석">C9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-C10" name="seat" value="C10"><label
+										class="seat" for="seat-C10" title="C10 좌석">C10</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-D1"
+										name="seat" value="D1"><label class="seat"
+										for="seat-D1" title="D1 좌석">D1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-D2"
+										name="seat" value="D2"><label class="seat"
+										for="seat-D2" title="D2 좌석">D2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-D3"
+										name="seat" value="D3"><label class="seat"
+										for="seat-D3" title="D3 좌석">D3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-D4"
+										name="seat" value="D4"><label class="seat"
+										for="seat-D4" title="D4 좌석">D4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-D5"
+										name="seat" value="D5"><label class="seat"
+										for="seat-D5" title="D5 좌석">D5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-D6"
+										name="seat" value="D6"><label class="seat"
+										for="seat-D6" title="D6 좌석">D6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-D7"
+										name="seat" value="D7" disabled><label class="seat"
+										for="seat-D7" title="D7 좌석">D7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-D8"
+										name="seat" value="D8" disabled><label class="seat"
+										for="seat-D8" title="D8 좌석">D8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-D9"
+										name="seat" value="D9"><label class="seat"
+										for="seat-D9" title="D9 좌석">D9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-D10" name="seat" value="D10"><label
+										class="seat" for="seat-D10" title="D10 좌석">D10</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-E1"
+										name="seat" value="E1"><label class="seat"
+										for="seat-E1" title="E1 좌석">E1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-E2"
+										name="seat" value="E2"><label class="seat"
+										for="seat-E2" title="E2 좌석">E2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-E3"
+										name="seat" value="E3"><label class="seat"
+										for="seat-E3" title="E3 좌석">E3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-E4"
+										name="seat" value="E4"><label class="seat"
+										for="seat-E4" title="E4 좌석">E4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-E5"
+										name="seat" value="E5"><label class="seat"
+										for="seat-E5" title="E5 좌석">E5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-E6"
+										name="seat" value="E6"><label class="seat"
+										for="seat-E6" title="E6 좌석">E6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-E7"
+										name="seat" value="E7"><label class="seat"
+										for="seat-E7" title="E7 좌석">E7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-E8"
+										name="seat" value="E8"><label class="seat"
+										for="seat-E8" title="E8 좌석">E8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-E9"
+										name="seat" value="E9"><label class="seat"
+										for="seat-E9" title="E9 좌석">E9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-E10" name="seat" value="E10"><label
+										class="seat" for="seat-E10" title="E10 좌석">E10</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-F1"
+										name="seat" value="F1"><label class="seat"
+										for="seat-F1" title="F1 좌석">F1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-F2"
+										name="seat" value="F2" disabled><label class="seat"
+										for="seat-F2" title="F2 좌석">F2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-F3"
+										name="seat" value="F3" disabled><label class="seat"
+										for="seat-F3" title="F3 좌석">F3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-F4"
+										name="seat" value="F4"><label class="seat"
+										for="seat-F4" title="F4 좌석">F4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-F5"
+										name="seat" value="F5"><label class="seat"
+										for="seat-F5" title="F5 좌석">F5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-F6"
+										name="seat" value="F6"><label class="seat"
+										for="seat-F6" title="F6 좌석">F6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-F7"
+										name="seat" value="F7"><label class="seat"
+										for="seat-F7" title="F7 좌석">F7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-F8"
+										name="seat" value="F8"><label class="seat"
+										for="seat-F8" title="F8 좌석">F8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-F9"
+										name="seat" value="F9"><label class="seat"
+										for="seat-F9" title="F9 좌석">F9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-F10" name="seat" value="F10"><label
+										class="seat" for="seat-F10" title="F10 좌석">F10</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-G1"
+										name="seat" value="G1"><label class="seat"
+										for="seat-G1" title="G1 좌석">G1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-G2"
+										name="seat" value="G2"><label class="seat"
+										for="seat-G2" title="G2 좌석">G2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-G3"
+										name="seat" value="G3"><label class="seat"
+										for="seat-G3" title="G3 좌석">G3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-G4"
+										name="seat" value="G4"><label class="seat"
+										for="seat-G4" title="G4 좌석">G4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-G5"
+										name="seat" value="G5"><label class="seat"
+										for="seat-G5" title="G5 좌석">G5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-G6"
+										name="seat" value="G6" disabled><label class="seat"
+										for="seat-G6" title="G6 좌석">G6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-G7"
+										name="seat" value="G7"><label class="seat"
+										for="seat-G7" title="G7 좌석">G7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-G8"
+										name="seat" value="G8"><label class="seat"
+										for="seat-G8" title="G8 좌석">G8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-G9"
+										name="seat" value="G9"><label class="seat"
+										for="seat-G9" title="G9 좌석">G9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-G10" name="seat" value="G10"><label
+										class="seat" for="seat-G10" title="G10 좌석">G10</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-H1"
+										name="seat" value="H1"><label class="seat"
+										for="seat-H1" title="H1 좌석">H1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-H2"
+										name="seat" value="H2"><label class="seat"
+										for="seat-H2" title="H2 좌석">H2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-H3"
+										name="seat" value="H3"><label class="seat"
+										for="seat-H3" title="H3 좌석">H3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-H4"
+										name="seat" value="H4"><label class="seat"
+										for="seat-H4" title="H4 좌석">H4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-H5"
+										name="seat" value="H5"><label class="seat"
+										for="seat-H5" title="H5 좌석">H5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-H6"
+										name="seat" value="H6"><label class="seat"
+										for="seat-H6" title="H6 좌석">H6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-H7"
+										name="seat" value="H7"><label class="seat"
+										for="seat-H7" title="H7 좌석">H7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-H8"
+										name="seat" value="H8"><label class="seat"
+										for="seat-H8" title="H8 좌석">H8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-H9"
+										name="seat" value="H9" disabled><label class="seat"
+										for="seat-H9" title="H9 좌석">H9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-H10" name="seat" value="H10"><label
+										class="seat" for="seat-H10" title="H10 좌석">H10</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-I1"
+										name="seat" value="I1"><label class="seat"
+										for="seat-I1" title="I1 좌석">I1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-I2"
+										name="seat" value="I2"><label class="seat"
+										for="seat-I2" title="I2 좌석">I2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-I3"
+										name="seat" value="I3"><label class="seat"
+										for="seat-I3" title="I3 좌석">I3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-I4"
+										name="seat" value="I4"><label class="seat"
+										for="seat-I4" title="I4 좌석">I4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-I5"
+										name="seat" value="I5"><label class="seat"
+										for="seat-I5" title="I5 좌석">I5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-I6"
+										name="seat" value="I6"><label class="seat"
+										for="seat-I6" title="I6 좌석">I6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-I7"
+										name="seat" value="I7"><label class="seat"
+										for="seat-I7" title="I7 좌석">I7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-I8"
+										name="seat" value="I8"><label class="seat"
+										for="seat-I8" title="I8 좌석">I8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-I9"
+										name="seat" value="I9"><label class="seat"
+										for="seat-I9" title="I9 좌석">I9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-I10" name="seat" value="I10" disabled><label
+										class="seat" for="seat-I10" title="I10 좌석">I10</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-J1"
+										name="seat" value="J1"><label class="seat"
+										for="seat-J1" title="J1 좌석">J1</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-J2"
+										name="seat" value="J2"><label class="seat"
+										for="seat-J2" title="J2 좌석">J2</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-J3"
+										name="seat" value="J3"><label class="seat"
+										for="seat-J3" title="J3 좌석">J3</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-J4"
+										name="seat" value="J4"><label class="seat"
+										for="seat-J4" title="J4 좌석">J4</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-J5"
+										name="seat" value="J5" disabled><label class="seat"
+										for="seat-J5" title="J5 좌석">J5</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-J6"
+										name="seat" value="J6"><label class="seat"
+										for="seat-J6" title="J6 좌석">J6</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-J7"
+										name="seat" value="J7"><label class="seat"
+										for="seat-J7" title="J7 좌석">J7</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-J8"
+										name="seat" value="J8"><label class="seat"
+										for="seat-J8" title="J8 좌석">J8</label></span><span
+										class="seat-choice"><input type="checkbox" id="seat-J9"
+										name="seat" value="J9"><label class="seat"
+										for="seat-J9" title="J9 좌석">J9</label></span><span
+										class="seat-choice"><input type="checkbox"
+										id="seat-J10" name="seat" value="J10"><label
+										class="seat" for="seat-J10" title="J10 좌석">J10</label></span>
+								</div>
+								<div class="seat-legend">
+									<span class="seat-legend__item"><span
+										class="seat-legend__swatch"></span>선택 가능</span><span
+										class="seat-legend__item"><span
+										class="seat-legend__swatch seat-legend__swatch--selected"></span>선택
+										좌석</span><span class="seat-legend__item"><span
+										class="seat-legend__swatch seat-legend__swatch--booked"></span>선택
+										불가(예시)</span>
+								</div>
+							</div>
+						</section>
+					</div>
+					<aside class="booking-summary">
+						<div class="summary-kicker">SEAT SELECTION</div>
+						<h2 class="booking-summary__title">좌석 선택 예시</h2>
+						<div class="summary-movie">
+							<img src="assets/posters/greencinema_poster_01.png" alt="다시, 봄">
+							<div>
+								<strong>다시, 봄</strong><small>그린시네마 홍대 / 1관</small>
+							</div>
+						</div>
+						<div class="booking-summary__row">
+							<span class="booking-summary__label">상영</span><strong
+								class="booking-summary__value">10.29 (목) · 18:10</strong>
+						</div>
+						<div class="booking-summary__row">
+							<span class="booking-summary__label">인원</span><strong
+								class="booking-summary__value">성인 1명 (예시)</strong>
+						</div>
+						<div class="booking-summary__row">
+							<span class="booking-summary__label">좌석</span><strong
+								class="booking-summary__value">직접 선택해보세요</strong>
+						</div>
+						<div class="booking-summary__total">
+							<span>예시 총 금액</span><span class="booking-summary__amount">14,000원</span>
+						</div>
+						<p class="summary-footnote">선택 결과는 다음 화면으로 전달되지 않습니다.</p>
+						<a class="btn btn--primary btn--block btn--large"
+							href="payment.html">결제 화면 보기 ↗</a><a
+							class="btn btn--outline btn--block" href="booking.html"
+							style="margin-top: 8px">이전 단계</a>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</main>
