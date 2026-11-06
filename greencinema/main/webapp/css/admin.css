@@ -19,6 +19,7 @@
   display: grid;
   grid-template-columns: 268px minmax(0, 1fr);
   min-height: 100vh;
+  min-width: 0;
 }
 
 .admin-side {
@@ -119,6 +120,7 @@
 }
 
 .admin-main {
+  min-width: 0;
   padding: 32px 36px 72px;
 }
 
@@ -178,8 +180,9 @@
 
 .admin-marquee p {
   margin: 0;
-  padding: 8px 0;
-  animation: admin-slide 22s linear infinite;
+  padding: 8px 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -262,6 +265,7 @@
 }
 
 .admin-section {
+  min-width: 0;
   margin-top: 34px;
 }
 
@@ -286,6 +290,7 @@
 }
 
 .admin-panel {
+  min-width: 0;
   padding: 18px;
   border: 1px solid rgb(255 255 255 / 8%);
   border-radius: 20px;
@@ -330,6 +335,7 @@
 }
 
 .admin-table-wrap {
+  max-width: 100%;
   overflow-x: auto;
 }
 
@@ -450,6 +456,11 @@
   .admin-nav {
     display: flex;
     flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .admin-nav a {
+    flex: 0 1 auto;
   }
 
   .admin-side__foot {

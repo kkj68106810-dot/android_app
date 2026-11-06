@@ -105,7 +105,7 @@
 			</header>
 
 			<div class="admin-marquee" aria-hidden="true">
-				<p>NOW SHOWING · GREEN CINEMA · HOUSE LIGHTS DOWN · TICKETS · NOTICES · INQUIRIES · NOW SHOWING · GREEN CINEMA · HOUSE LIGHTS DOWN · TICKETS · NOTICES · INQUIRIES ·&nbsp;</p>
+				<p>NOW SHOWING · GREEN CINEMA · HOUSE LIGHTS DOWN · TICKETS · NOTICES · INQUIRIES</p>
 			</div>
 
 			<c:if test="${param.saved == '1'}">
